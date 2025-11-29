@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BBIS Curriculum - Course Offerings</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg,  100%);
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+
+        header {
+            background: linear-gradient(135deg, #8B0000 0%, #5d0000 100%);
+            color: white;
+            padding: 40px 30px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+
+        .content {
+            padding: 40px 30px;
+        }
+
+        .semester-section {
+            margin-bottom: 50px;
+        }
+
+        .semester-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .semester-card {
+            background: #f8f9fa;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .semester-header {
+            background: #8B0000;
+            color: white;
+            padding: 20px;
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        .course-table {
+            width: 100%;
+        }
+
+        .course-table thead {
+            background: #6c1010;
+            color: white;
+        }
+
+        .course-table th {
+            padding: 12px;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        .course-table td {
+            padding: 12px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .course-table tr:hover {
+            background: #f0f0f0;
+        }
+
+        .course-code {
+            font-weight: 600;
+            color: #8B0000;
+        }
+
+        .credit-col {
+            text-align: center;
+            font-weight: 600;
+        }
+
+        .total-row {
+            background: #8B0000;
+            color: white;
+            font-weight: bold;
+        }
+
+        .total-row td {
+            border: none;
+            padding: 15px 12px;
+        }
+
+        .note {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+
+        .electives-section {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 10px;
+            margin-top: 30px;
+        }
+
+        .electives-section h3 {
+            color: #8B0000;
+            margin-bottom: 15px;
+            font-size: 1.5em;
+        }
+
+        .electives-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+        }
+
+        .elective-item {
+            background: white;
+            padding: 12px;
+            border-radius: 5px;
+            border-left: 3px solid #8B0000;
+        }
+
+        .elective-code {
+            font-weight: 600;
+            color: #8B0000;
+            margin-right: 8px;
+        }
+
+        @media (max-width: 768px) {
+            .semester-grid {
+                grid-template-columns: 1fr;
+            }
+
+            header h1 {
+                font-size: 1.8em;
+            }
+
+            .content {
+                padding: 20px 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Bachelor of Business Information Systems</h1>
+            <p>Semester-wise Course Offerings</p>
+        </header>
+
+        <div class="content">
+            <!-- Semesters I & II -->
+            <div class="semester-section">
+                <div class="semester-grid">
+                    <div class="semester-card">
+                        <div class="semester-header">Semester I</div>
+                        <table class="course-table">
+                            <thead>
+                                <tr>
+                                    <th>Code</th>
+                                    <th>Course Title</th>
+                                    <th class="credit-col">Credit</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="course-code">ENG 101</td>
+                                    <td>English I</td>
+                                    <td class="credit-col">3</td>
+                                </tr>
+                                <tr>
+                                    <td class="course-code">MAS 101</td>
+                                    <td>Mathematics I</td>
+                                    <td class="credit-col">3</td>
+                                </tr>
+                                <tr>
+                                    <td class="course-code">ECO 101</td>
+                                    <td>Microeconomics*</td>
+                                    <td class="credit-col">3</td>
+                                </tr>
+                                <tr>
+                                    <td class="course-code">ACC 101</td>
+                                    <td>Financial Accountancy*</td>
+                                    <td class="credit-col">3</td>
+                                </tr>
+                                <tr>
+                                    <td class="course-code">COM 101</td>
+                                    <td>Information Systems Technology*</td>
+                                    <td class="credit-col">3</td>
+                                </tr>
+                                <tr>
+                                    <td class="course-code">COM 102</td>
+                                    <td>Structured Programming</td>
+                                    <td class="credit-col">3</td>
+                                </tr>
+                                <tr class="total-row">
+                                    <td colspan="2">Total Credits</td>
+                                    <td class="credit-col">18</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="semester-card">
+                        <div class="semester-header">Semester II</div>
+                        <table class="course-table">
+                            <thead>
+                                <tr>
+                                    <th>Code</th>
+                                    <th>Course Title</th>
+                                    <th class="credit-col">Credit</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="course-code">ENG 102</td>
+                                    <td>English II</td>
+                                    <td class="credit-col">3</td>
+                                </tr>
+                                <tr>
+                                    <td class="course-code">MAS 102</td>
+                                    <td>Mathematics II</td>
+                                    <td class="credit-col">3</td>
+                                </tr>
+                                <tr>
+                                    <td class="course-code">ECO 102</td>
+                                    <td>Macroeconomics*</td>
+                                    <td class="credit-col">3</td>
+                                </tr>
+                                <tr>
+                                    <td class="course-code">GEM 231</td>
+                                    <td>Business Management</td>
+                                    <td class="credit-col">3</td>
+                                </tr>
+                                <tr>
+                                    <td class="course-code">COM 103</td>
+                                    <td>Object Oriented Programming</td>
+                                    <td class="credit-col">3</td>
+                                </tr>
+                                <tr>
+                                    <td class="course-code">COM 105</td>
+                                    <td>Digital Logic</td>
+                                    <td class="credit-col">3</td>
+                                </tr>
+                                <tr class="total-row">
+                                    <td colspan="2">Total Credits</td>
+                                    <td class="credit-col">18</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Semesters III & IV -->
+            <div class="semester-section">
+                <div class="semester-grid">
+                    <div class="semester-card">
+                        <div class="semester-header">Semester III</div>
+                        <table class="course-table">
+                            <thead>
+                                <tr>
+                                    <th>Code</th>
+                                    <th>Course Title</th>
+                                    <th class="credit-col">Credit</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="course-code">SOC 121</td>
+                                    <td>Sociology for Business</td>
+                                    <td class="credit-col">3</td>
+                                </tr>
+                                <tr>
+                                    <td class="course-code">MAS 110</td>
+                                    <td>Fundamentals of Statistics</td>
+                                    <td class="credit-col">3</td>
+                                </tr>
+                                <tr>
+                                    <td class="course-code">GEM 210</td>
+                                    <td>Managerial Communication</td>
+                                    <td class="credit-col">3</td>
+                                </tr>
+                                <tr>
+                                    <td class="course-code">GEM 230</td>
+                                    <td>Business Law</td>
+                                    <td class="credit-col">3</td>
+                                </tr>
+                                <tr>
+                                    <td class="course-code">COM 312</td>
+                                    <td>Data Structure and Algorithms</td>
+                                    <td class="credit-col">3</td>
+                                </tr>
+                                <tr>
+                                    <td class="course-code">COM 211</td>
+                                    <td>Operating Systems</td>
+                                    <td class="credit-col">3</td>
+                                </tr>
+                                <tr class="total-row">
+                                    <td colspan="2">Total Credits</td>
+                                    <td class="credit-col">18</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="semester-card">
+                        <div class="semester-header">Semester IV</div>
+                        <table class="course-table">
+                            <thead>
+                                <tr>
+                                    <th>Code</th>
+                                    <th>Course Title</th>
+                                    <th class="credit-col">Credit</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="course-code">GEM 211</td>
+                                    <td>Critical Thinking and Problem Solving</td>
+                                    <td class="credit-col">3</td>
+                                </tr>
+                                <tr>
+                                    <td class="course-code">MKT 201</td>
+                                    <td>Fundamentals of Marketing I</td>
+                                    <td class="credit-col">3</td>
+                                </tr>
+                                <tr>
+                                    <td class="course-code">MAS 211</td>
+                                    <td>Applied Business Statistics</td>
+                                    <td class="credit-col">3</td>
+                                </tr>
+                                <tr>
+                                    <td class="course-code">COM 330</td>
+                                    <td>Database Management Systems</td>
+                                    <td class="credit-col">3</td>
+                                </tr>
+                                <tr>
+                                    <td class="course-code">COM 241</td>
+                                    <td>Computer Networks and Data Communications</td>
+                                    <td class="credit-col">3</td>
+                                </tr>
+                                <tr>
+                                    <td class="course-code">COM 244</td>
+                                    <td>Project Work I</td>
+                                    <td class="credit-col">3</td>
+                                </tr>
+                                <tr class="total-row">
+                                    <td colspan="2">Total Credits</td>
+                                    <td class="credit-col">18</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Semesters V & VI -->
+            <div class="semester-section">
+                <div class="semester-grid">
+                    <div class="semester-card">
+                        <div class="semester-header">Semester V</div>
+                        <table class="course-table">
+                            <thead>
+                                <tr>
+                                    <th>Code</th>
+                                    <th>Course Title</th>
+                                    <th class="credit-col">Credit</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="course-code">MAS 103</td>
+                                    <td>Quantitative Techniques</td>
+                                    <td class="credit-col">3</td>
+                                </tr>
+                                <tr>
+                                    <td class="course-code">MKT 201</td>
+                                    <td>Digital Marketing</td>
+                                    <td class="credit-col">3</td>
+                                </tr>
+                                <tr>
+                                    <td class="course-code">HRM 230</td>
+                                    <td>Organizational Behavior</td>
+                                    <td class="credit-col">3</td>
+                                </tr>
+                                <tr>
+                                    <td class="course-code">FIN 202</td>
+                                    <td>Managerial Finance I</td>
+                                    <td class="credit-col">3</td>
+                                </tr>
+                                <tr>
+                                    <td class="course-code">COM 312</td>
+                                    <td>Management Information System</td>
+                                    <td class="credit-col">3</td>
+                                </tr>
+                                <tr>
+                                    <td class="course-code">COM 322</td>
+                                    <td>Web Technology*</td>
+                                    <td class="credit-col">3</td>
+                                </tr>
+                                <tr class="total-row">
+                                    <td colspan="2">Total Credits</td>
+                                    <td class="credit-col">18</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="semester-card">
+                        <div class="semester-header">Semester VI</div>
+                        <table class="course-table">
+                            <thead>
+                                <tr>
+                                    <th>Code</th>
+                                    <th>Course Title</th>
+                                    <th class="credit-col">Credit</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="course-code">MAS 310</td>
+                                    <td>Operations Management</td>
+                                    <td class="credit-col">3</td>
+                                </tr>
+                                <tr>
+                                    <td class="course-code">HRM 201</td>
+                                    <td>Human Resource Management</td>
+                                    <td class="credit-col">3</td>
+                                </tr>
+                                <tr>
+                                    <td class="course-code">FIN 203</td>
+                                    <td>Managerial Finance II</td>
+                                    <td class="credit-col">3</td>
+                                </tr>
+                                <tr>
+                                    <td class="course-code">COM 350</td>
+                                    <td>Cloud Computing</td>
+                                    <td class="credit-col">3</td>
+                                </tr>
+                                <tr>
+                                    <td class="course-code">COM 361</td>
+                                    <td>Artificial Intelligence</td>
+                                    <td class="credit-col">3</td>
+                                </tr>
+                                <tr>
+                                    <td class="course-code">COM 344</td>
+                                    <td>Project Work II</td>
+                                    <td class="credit-col">3</td>
+                                </tr>
+                                <tr class="total-row">
+                                    <td colspan="2">Total Credits</td>
+                                    <td class="credit-col">18</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="note">
+                    <strong>Note:</strong> A non-credit Social Experience Project in Semester VI
+                </div>
+            </div>
+
+            <!-- Semesters VII & VIII -->
+            <div class="semester-section">
+                <div class="semester-grid">
+                    <div class="semester-card">
+                        <div class="semester-header">Semester VII</div>
+                        <table class="course-table">
+                            <thead>
+                                <tr>
+                                    <th>Code</th>
+                                    <th>Course Title</th>
+                                    <th class="credit-col">Credit</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="course-code">RES 440</td>
+                                    <td>Research Methodology</td>
+                                    <td class="credit-col">3</td>
+                                </tr>
+                                <tr>
+                                    <td class="course-code">GEM 470</td>
+                                    <td>International Business</td>
+                                    <td class="credit-col">3</td>
+                                </tr>
+                                <tr>
+                                    <td class="course-code">GEM 310</td>
+                                    <td>Entrepreneurship and NBF</td>
+                                    <td class="credit-col">3</td>
+                                </tr>
+                                <tr>
+                                    <td class="course-code">GEM 332</td>
+                                    <td>Project Management</td>
+                                    <td class="credit-col">3</td>
+                                </tr>
+                                <tr>
+                                    <td class="course-code">COM 321</td>
+                                    <td>System Analysis and Design</td>
+                                    <td class="credit-col">3</td>
+                                </tr>
+                                <tr>
+                                    <td class="course-code">COM 441</td>
+                                    <td>Information Security</td>
+                                    <td class="credit-col">3</td>
+                                </tr>
+                                <tr class="total-row">
+                                    <td colspan="2">Total Credits</td>
+                                    <td class="credit-col">18</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="semester-card">
+                        <div class="semester-header">Semester VIII</div>
+                        <table class="course-table">
+                            <thead>
+                                <tr>
+                                    <th>Code</th>
+                                    <th>Course Title</th>
+                                    <th class="credit-col">Credit</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="course-code">GEM 490</td>
+                                    <td>Operations Management</td>
+                                    <td class="credit-col">3</td>
+                                </tr>
+                                <tr>
+                                    <td class="course-code">COM 469</td>
+                                    <td>Human Resource Management</td>
+                                    <td class="credit-col">3</td>
+                                </tr>
+                                <tr>
+                                    <td class="course-code">-</td>
+                                    <td>Elective</td>
+                                    <td class="credit-col">3</td>
+                                </tr>
+                                <tr>
+                                    <td class="course-code">-</td>
+                                    <td>Project Work II</td>
+                                    <td class="credit-col">3</td>
+                                </tr>
+                                <tr>
+                                    <td class="course-code">-</td>
+                                    <td>Internship</td>
+                                    <td class="credit-col">3</td>
+                                </tr>
+                                <tr class="total-row">
+                                    <td colspan="2">Total Credits</td>
+                                    <td class="credit-col">15</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Electives Section -->
+            <div class="electives-section">
+                <h3>Available Electives</h3>
+                <div class="electives-grid">
+                    <div class="elective-item">
+                        <span class="elective-code">COM 470</span>
+                        <span>Data Warehouse and Data Mining</span>
+                    </div>
+                    <div class="elective-item">
+                        <span class="elective-code">COM 472</span>
+                        <span>Decision Support and Expert System</span>
+                    </div>
+                    <div class="elective-item">
+                        <span class="elective-code">COM 331</span>
+                        <span>Advanced DBMS</span>
+                    </div>
+                    <div class="elective-item">
+                        <span class="elective-code">MKT 474</span>
+                        <span>Service Management</span>
+                    </div>
+                    <div class="elective-item">
+                        <span class="elective-code">GEM 331</span>
+                        <span>Supply Chain Management</span>
+                    </div>
+                    <div class="elective-item">
+                        <span class="elective-code">GEM 330</span>
+                        <span>Productivity and Quality Management</span>
+                    </div>
+                    <div class="elective-item">
+                        <span class="elective-code">GEM 360</span>
+                        <span>E-Commerce</span>
+                    </div>
+                    <div class="elective-item">
+                        <span class="elective-code">GEM ---</span>
+                        <span>Technology Management</span>
+                    </div>
+                    <div class="elective-item">
+                        <span class="elective-code">GEM ---</span>
+                        <span>Knowledge Engineering</span>
+                    </div>
+                    <div class="elective-item">
+                        <span class="elective-code">COM 481</span>
+                        <span>Mobile Computing</span>
+                    </div>
+                    <div class="elective-item">
+                        <span class="elective-code">COM 483</span>
+                        <span>Human Resource Information System</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
